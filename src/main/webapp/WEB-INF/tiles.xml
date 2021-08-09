@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!--    Tiles ADMINNNNNNNNNNNNN-->
+    <!--main-layout-->
+    <definition name="admin-main-layout" template="/WEB-INF/views/adminlayouts/index_admin.jsp">
+        <put-attribute name="title_admin" value="Spec edu"/>
+        <put-attribute name="main_layout_admin" value="/WEB-INF/views/adminlayouts/main_layout_admin.jsp"/>
+    </definition>
+
+    <!--index-layout-->
+    <definition name="admin-index-layout" extends="admin-main-layout">
+        <put-attribute name="header_admin" value="/WEB-INF/views/adminbasefragments/header_admin.jsp" cascade="true"/>
+        <put-attribute name="footer_admin" value="/WEB-INF/views/adminbasefragments/footer_admin.jsp" cascade="true"/>
+    </definition>
+    <!--index-layout-->
+    <definition name="admin-login" template="/WEB-INF/views/adminlayouts/index_admin.jsp">
+        <put-attribute name="title_admin" value="Login"/>
+        <put-attribute name="main_layout_admin" value="/WEB-INF/views/adminbodyfragments/login.jsp" cascade="true"/>
+    </definition>
+
+    <!--Trang Chu-->
+    <definition name="admin-trang-chu" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Trang chủ"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/home_admin.jsp" cascade="true"/>
+    </definition>
+    <!--Nhan vien-->
+    <definition name="admin-nhan-vien" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Nhân viên"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/nhan_vien.jsp" cascade="true"/>
+    </definition>
+    <!--Nhóm sản phẩm -->
+    <definition name="admin-nhom-san-pham" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Nhóm sản phẩm"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/nhom_san_pham.jsp" cascade="true"/>
+    </definition>
+    <!--Thương hiệu -->
+    <definition name="admin-thuong-hieu" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Thương hiệu"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/thuong_hieu.jsp" cascade="true"/>
+    </definition>
+    <!--Sản phẩm -->
+    <definition name="admin-san-pham" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Sản phẩm"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/san_pham.jsp" cascade="true"/>
+    </definition>
+    <!--giỏ hàng -->
+    <definition name="admin-gio-hang" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Giỏ hàng"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/gio_hang.jsp" cascade="true"/>
+    </definition>
+    <!--hóa đơn đã thanh toán -->
+    <definition name="admin-hoa-don-da-thanh-toan" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Hóa đơn đã thanh toán"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/danh_sach_hoa_don_mua.jsp" cascade="true"/>
+    </definition>
+    <!--Báo cáo -->
+    <definition name="admin-bao-cao" extends="admin-index-layout">
+        <put-attribute name="title_admin" value="Báo cáo, thống kê"/>
+        <put-attribute name="body_admin" value="/WEB-INF/views/adminbodyfragments/baocao.jsp" cascade="true"/>
+    </definition>
+
+</tiles-definitions>
